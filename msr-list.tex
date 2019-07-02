@@ -11,6 +11,7 @@
 \usepackage{float}
 \usepackage{caption}
 \usepackage{xcolor}
+\usepackage{makecell}
 \def\thesection       {\arabic{section}}
 \def\thesubsection     {\thesection.\alph{subsection}}
 
@@ -27,11 +28,9 @@
 \end{titlepage}
 
 \section{Introduction}
-Molten salt reactors, or MSRs, are a hopeful candidate for the next line of commerical nuclear reactors.  However, there is a lack of experiental data and real-world experience compared to the light-water reactors that make up much of the world's current fleet.***say more words here later***
+Molten salt reactors, or MSRs, are a hopeful candidate for the next line of commerical nuclear reactors.  However, there is a lack of experiental data and real-world experience compared to the light-water reactors that make up much of the world's current fleet.
 
-To begin, take note of \cite{macpherson_molten_1985} and \cite{rosenthal_molten-salt_1970}.  These articles are not specific designs, instead, they give a general history of US MSR technology up to approximately 1980.  \cite{macpherson_molten_1985}, in particular, is a personal account of the author's experience in the growing field, and offers interesting insight.\\
-
-This report seeks to collect various MSR designs and reprocessing techniques, and from them, provide an idea of the range of MSR features.  The intent is to capture the expected varieties of fluid-fueled MSRs such that models and simulations can accommodate a broad range of designs.  The features given in this review include characteristics such as:
+This report seeks to collect various MSR designs and reprocessing techniques, provide an idea of the range of MSR features.  The intent is to capture the expected varieties of fluid-fueled MSRs such that models and simulations can accommodate a broad range of designs.  The features given in this review include characteristics such as:
 
 \begin{itemize}
 \item Single fluid or two fluid salt
@@ -44,31 +43,31 @@ This report seeks to collect various MSR designs and reprocessing techniques, an
 
 The processing methods for each reactor will also be given, in as much detail as possible.  The goal is to collect information of possible MSR processing methods in one place, and, to give a better idea of the general trends in fuel-processing methodologies.
 
+To begin, take note of \cite{macpherson_molten_1985} and \cite{rosenthal_molten-salt_1970}.  These articles are not specific designs, instead, they give a general history of US MSR technology up to approximately 1980. \emph{The Molten Salt Adventure}, \cite{macpherson_molten_1985}, in particular, is a personal account of the author's experience in the growing field, and offers interesting insight.\\
+
 \section{Molten Salt Reactor Experiment (MSRE)}
 This reactor is given as the first MSR design.  Technically, the Aircraft Reactor Experiment is its predecessor, however, given its unsuitability as a commercial reactor (and the focus of this report on such reactors) it is not included in detail here.  The MSRE has general characteristics, described thusly: \cite{robertson_msre_1965}
 
 \begin{center}
 \begin{tabular}{|c|c|}
 \hline
-MWth & value \\
+MWth & 10\\
 \hline
-MWe & value \\
+MWe & Not Given \\
 \hline
-Spectrum & value \\
+Spectrum & Thermal \\
 \hline
-Core Inlet Temperature & value \\
+Core Inlet Temperature & 635 C \\
 \hline
-Core Outlet Temperature & value\\
+Core Outlet Temperature & 663 C\\
 \hline
-Pressure & value \\
+Pressure & 0.14 MPa \\
 \hline
 \end{tabular}
 \end{center}
 
 \begin{itemize}
-\item Heat generation of 10 MWth
 \item Single-region
-\item Graphite moderator
 \item Fuel salt is a mix of lithium, beryllium, and zirconium fluoride salts, using either uranium or uranium and thorium.  Specifics of the composition are given in Table 2.1 of \cite{robertson_msre_1965}.
 \item Total core volume is 90 cubic feet.  20 cubic feet is fuel, 70 cubic feet is graphite.
 \item Graphite matrix is set in a rectangular grid, with 6 holes taken out to hold control rods.
@@ -88,9 +87,27 @@ Pressure & value \\
   \label{fig:fig2}
 \end{figure}
 
-There is not "online" reprocessing in this design, exactly.  When the fuel salts have become contaminated or otherwise undesireable, they are removed from the reactor, which is then flushed with a "flush salt".  This flush salt is simply the fuel salt mixture without any of the fissile isotopes added.
 
-After chemical treatment, what can be saved from the salt is reused, the rest is disposed of.
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+Fuel-Moderator Ratio & 22.4-77.6 \\
+\hline
+Coolant & $LiFBeF_2$ \\
+\hline
+Moderator & Graphite \\
+\hline
+Fuel Composition & 2, 3, 4 \\
+\hline
+\end{tabular}
+\end{center}
+
+The fuel processing in the MSRE is relatively straight-forward.  The helium cover gas used in the pump bowl will remove fission product gases.  Beyond the off-gas system, and further fuel processing is done batch-wise, not as part of the fuel loop.  This fuel processing system can:
+
+\begin{itemize}
+\item Treat batches of oxygen-contaminated fuel salts with a $H_2F$ gas to remove the oxygen
+\item Can perform fluorination on batches of fuel salts.  This will separate the uranium from the salt mixture.  From this point, the salt is either sent to waste, or kept, and a new fuel is added to the batch.  This allows for both "cleaning" the fuel, or changing its composition considerably, in large quantities.
+\end{itemize}
 
 \section{Molten Salt Breeder Reactor (MSBR)}
 The MSBR builds on the MSRE, adding a conversion ratio high enough to classify the MSBR as a true breeder reactor.  It features a higher power in its design specifications, at the cost of a low graphite lifetime.  Additionally, it has a lesser fuel vol\% than the MSRE, and two fewer control rods.
@@ -98,17 +115,17 @@ The MSBR builds on the MSRE, adding a conversion ratio high enough to classify t
 \begin{center}
 \begin{tabular}{|c|c|}
 \hline
-MWth & value \\
+MWth & 2250 \\
 \hline
-MWe & value \\
+MWe & 1000 \\
 \hline
-Spectrum & value \\
+Spectrum & Thermal \\
 \hline
-Core Inlet Temperature & value \\
+Core Inlet Temperature & 566 C \\
 \hline
-Core Outlet Temperature & value\\
+Core Outlet Temperature & 704 C\\
 \hline
-Pressure & value \\
+Pressure & 0.52 MPa \\
 \hline
 \end{tabular}
 \end{center}
@@ -128,6 +145,20 @@ Pressure & value \\
 \item Fuel salt is $LiF - BeF_2 - ThF_4 - UF_4$, using ${}^{233}U$ as the fissile isotope.  The concentrations in mole\%, from table 1 of \cite{bettis_design_1970}, is given as $71.6 - 16.0 - 12.0 - 0.4$, respectively.
 \item Graphite matrix is a rectangluar grid with 4 control rod slots in the center.
 \end{itemize}
+
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+Fuel-Moderator Ratio & 13-87 \\
+\hline
+Moderator & Graphite \\
+\hline
+Fuel Composition & 5 \\
+\hline
+Secondary Salt* & $NaBF_4-NaF$ \\
+\hline
+\end{tabular}
+\end{center}
 
 \begin{figure}[H]
   \centering
@@ -160,17 +191,17 @@ A reactor concept from ORNL, hoping to build on the MSRE and show the commercial
 \begin{center}
 \begin{tabular}{|c|c|}
 \hline
-MWth & value \\
+MWth & 750 \\
 \hline
-MWe & value \\
+MWe & 350 \\
 \hline
-Spectrum & value \\
+Spectrum & Thermal \\
 \hline
-Core Inlet Temperature & value \\
+Core Inlet Temperature & 566 C\\
 \hline
-Core Outlet Temperature & value\\
+Core Outlet Temperature & 677 C\\
 \hline
-Pressure & value \\
+Pressure & \makecell{Not given explicitly.  Assume\\pressure drop of 0.03 MPa across reflectors.\\Nothing in source to indicate core vessel\\pressure differs significantly from predecessors.} \\
 \hline
 \end{tabular}
 \end{center}
@@ -198,6 +229,20 @@ Pressure & value \\
   \label{fig:fig6}
 \end{figure}
 
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+Fuel-Moderator Ratio & 10-90 \\
+\hline
+Coolant & $LiFBeF_2$ \\
+\hline
+Moderator & Graphite \\
+\hline
+Fuel Composition & 6 \\
+\hline
+\end{tabular}
+\end{center}
+
 The processing used in this reactor is minimal, and is intentionally limited to what was used in the MSRE.  All salt processing is as follows:
 
 \begin{itemize}
@@ -223,17 +268,17 @@ The basic qualities of this reactor are as follows:
 \begin{center}
 \begin{tabular}{|c|c|}
 \hline
-MWth & value \\
+MWth & 2250 \\
 \hline
-MWe & value \\
+MWe & 1000 \\
 \hline
-Spectrum & value \\
+Spectrum & Thermal \\
 \hline
-Core Inlet Temperature & value \\
+Core Inlet Temperature & 566 C \\
 \hline
-Core Outlet Temperature & value\\
+Core Outlet Temperature & 704 C\\
 \hline
-Pressure & value \\
+Pressure & Not given \\
 \hline
 \end{tabular}
 \end{center}
@@ -263,6 +308,22 @@ Pressure & value \\
   \label{fig:fig7}
 \end{figure}
 
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+Fuel-Moderator Ratio: Inner Core & 20-80 \\
+\hline
+Fuel-Moderator Ratio: Outer Core & 12.94-87.06  \\
+\hline
+Coolant & $LiFBeF_2$ \\
+\hline
+Moderator & Graphite \\
+\hline
+Fuel Composition & 7 \\
+\hline
+\end{tabular}
+\end{center}
+
 \section{Integral Molten Salt Reactor (IMSR)}
 
 The IMSR400 is a small modular reactor (SMR) patented by Terrestrial Energy Inc.  The "core-unit" consists of the core, and integrated pumps and heat exchangers.  The core-unit has a lifetime of 7 years, but is made to be easily replaced, giving the designed plant an expected lifetime of 30 years.  Some specifics of this reactor, such as the fuel-coolant mixture, is proprietary, and explicit detail is not given.  What information is publicly available is as follows \cite{leblanc_18_2017}:
@@ -270,17 +331,17 @@ The IMSR400 is a small modular reactor (SMR) patented by Terrestrial Energy Inc.
 \begin{center}
 \begin{tabular}{|c|c|}
 \hline
-MWth & value \\
+MWth & 400 \\
 \hline
-MWe & value \\
+MWe & 188 \\
 \hline
-Spectrum & value \\
+Spectrum & Thermal \\
 \hline
-Core Inlet Temperature & value \\
+Core Inlet Temperature & 647 C \\
 \hline
-Core Outlet Temperature & value\\
+Core Outlet Temperature & 685 C\\
 \hline
-Pressure & value \\
+Pressure & 0.4 MPa \\
 \hline
 \end{tabular}
 \end{center}
@@ -308,23 +369,37 @@ Pressure & value \\
   \label{fig:fig9}
 \end{figure}
 
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+Fuel-Moderator Ratio & N/A \\
+\hline
+Coolant & Fluoride Salt \\
+\hline
+Moderator & Graphite \\
+\hline
+Fuel Composition & "Fluoride Fuel Salt" \\
+\hline
+\end{tabular}
+\end{center}
+
 \section{Molten Salt Fast Reactor (MSFR)}
 Of the reactors given in this review, this is one of the few fast reactors (the other being Terrapower's MCFR, given below).  Because such a reactor does not use a moderator, it circumvents some of the material contraints associated with degradation of the graphite moderator.  It also has a much higher breeding ratio.  This report uses a conceptual reference reactor with these characteristics \cite{rouch_preliminary_2014}: 
 
 \begin{center}
 \begin{tabular}{|c|c|}
 \hline
-MWth & value \\
+MWth & 3000 \\
 \hline
-MWe & value \\
+MWe & 1500 \\
 \hline
-Spectrum & value \\
+Spectrum & Fast \\
 \hline
-Core Inlet Temperature & value \\
+Core Inlet Temperature & 625 C \\
 \hline
-Core Outlet Temperature & value\\
+Core Outlet Temperature & 730 C \\
 \hline
-Pressure & value \\
+Pressure & Not Given \\
 \hline
 \end{tabular}
 \end{center}
@@ -353,6 +428,20 @@ Pressure & value \\
   \label{fig:fig10}
 \end{figure}
 
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+Fuel-Moderator Ratio & 100-0 \\
+\hline
+Coolant & \makecell{As fuel salt, without\\fuel isotopes.} \\
+\hline
+Moderator & No moderator \\
+\hline
+Fuel Composition & 8, 9 \\
+\hline
+\end{tabular}
+\end{center}
+
 In a separate report, \cite{doligez_coupled_2014} , a reactor with the same nominal power, and actinide mol\%.   While \cite{rouch_preliminary_2014} is focused on the thermal-hydraulic facets of an MSFR, \cite{doligez_coupled_2014} provides more in-depth information about the sort of fuel salt composition used in its reference model, and includes information on the reprocessing within the reference MSFR.
 
 \begin{itemize}
@@ -369,17 +458,17 @@ The Transatomic reactor has two important differences from other thermal-spectru
 \begin{center}
 \begin{tabular}{|c|c|}
 \hline
-MWth & value \\
+MWth & 1250 \\
 \hline
-MWe & value \\
+MWe & 520 \\
 \hline
-Spectrum & value \\
+Spectrum & Thermal \\
 \hline
-Core Inlet Temperature & value \\
+Core Inlet Temperature & Not Given \\
 \hline
-Core Outlet Temperature & value\\
+Core Outlet Temperature & 650 C\\
 \hline
-Pressure & value \\
+Pressure & "Near-Atmospheric" \\
 \hline
 \end{tabular}
 \end{center}
@@ -402,34 +491,21 @@ Pressure & value \\
 	\end{itemize}
 \end{itemize}
 
-\section{Terrapower}
-website \href{https://terrapower.com/technologies/mcfr}{here}
-
-Much of the current information about Terrapower's designs are in patents, and, therefore, not given in exact detail \cite{hyde_liquid_2015}.  However, it can be said that:
-
 \begin{center}
 \begin{tabular}{|c|c|}
 \hline
-MWth & value \\
+Fuel-Moderator Ratio & Not Given \\
 \hline
-MWe & value \\
+Coolant & $FLiNaK$ \\
 \hline
-Spectrum & value \\
+Moderator & Zirconium Hydride \\
 \hline
-Core Inlet Temperature & value \\
-\hline
-Core Outlet Temperature & value\\
-\hline
-Pressure & value \\
+Fuel Composition & 10 \\
 \hline
 \end{tabular}
 \end{center}
 
-\begin{itemize}
-\item The core has two regions, one fissile, one a fertile blanket.  The patent does not specify how exactly these regions are arranged, and also gives a homogenous mixture of the two materials as a possibility
-\item ${}^{239}Pu$ is given as a possible isotope present in the fissile region, and ${}^{238}U$ as the fertile isotope in the fertile blanket
-\end{itemize}
 
 \bibliographystyle{plain}
-\bibliography{2019-richter-msr-litrev}
+\bibliography{2019-richter-msr-litrev.bib}
 \end{document}
