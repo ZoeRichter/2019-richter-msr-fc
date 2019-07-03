@@ -109,6 +109,20 @@ The fuel processing in the MSRE is relatively straight-forward.  The helium cove
 \item Can perform fluorination on batches of fuel salts.  This will separate the uranium from the salt mixture.  From this point, the salt is either sent to waste, or kept, and a new fuel is added to the batch.  This allows for both "cleaning" the fuel, or changing its composition considerably, in large quantities.
 \end{itemize}
 
+\begin{figure}[H]
+  \centering
+  \includegraphics[height=.5\textheight]{figures/msre-proc.png}
+  \captionof{figure}{A diagram of the fuel-processing cell of the MSRE}
+  \label{fig:figA}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[height=.5\textheight]{figures/msre-offgas.png}
+  \captionof{figure}{The off-gas system of the MSRE}
+  \label{fig:figB}
+\end{figure}
+
 \section{Molten Salt Breeder Reactor (MSBR)}
 The MSBR builds on the MSRE, adding a conversion ratio high enough to classify the MSBR as a true breeder reactor.  It features a higher power in its design specifications, at the cost of a low graphite lifetime.  Additionally, it has a lesser fuel vol\% than the MSRE, and two fewer control rods.
 
@@ -182,6 +196,20 @@ The chemical processing is more involved than the MSRE, and includes:
 	\end{itemize}
 \end{itemize}
 
+\begin{figure}[H]
+  \centering
+  \includegraphics[height=.5\textheight]{figures/msbr-proc.png}
+  \captionof{figure}{Material Flow in the MSBR Fuel-Processing Cell}
+  \label{fig:figC}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[height=.5\textheight]{figures/msbr-offgas.png}
+  \captionof{figure}{The off-gas system in the MSBR}
+  \label{fig:figD}
+\end{figure}
+
 \section{Molten Salt Demonstration Reactor (MSDR)}
 A reactor concept from ORNL, hoping to build on the MSRE and show the commercial capabilities of an MSR.  The intention is to show the feasibility of a breeder MSR, however, the MSDR's conversion ratio isn't high enough to technically be a breeder.  Instead, it is a converter \cite{bettis_design_1972}.  One difference of note between the MSDR and the MSBR is that the  MSDR maintains a low enough power density that the graphite moderator is expected to last 30 years.  This is in stark contrast to the MSBR, which operates at a higher power density, and only anticipates a 4 year graphite lifetime.
 
@@ -249,6 +277,19 @@ The processing used in this reactor is minimal, and is intentionally limited to 
 \item Other fission products are not removed from the salt in a short time scale.  Instead, the salt is replaced every 8 years.  Fissile materials are taken from "spent" salt, where possible.
 \end{itemize}
 
+\begin{figure}[H]
+  \centering
+  \includegraphics[height=.5\textheight]{figures/msdr-overview.png}
+  \captionof{figure}{An overview of the fuel processing in the MSDR design}
+  \label{fig:figE}
+  
+\end{figure}\begin{figure}[H]
+  \centering
+  \includegraphics[height=.5\textheight]{figures/msdr-offgas.png}
+  \captionof{figure}{The MSDR's off-gas system}
+  \label{fig:figF}
+\end{figure}
+
 \section{Denatured Molten Salt Reactor (DMSR)}
 
 This reactor is heavily based on the MSBR.  In fact, the design is mostly identical, except the DMSR does not remove fission products during the 30 year lifetime of design.  It does however, include helium sparging and some limited chemical processing to maintain salt quality.  This particular design is prompted by guidance given in 1976 by what is now the DOE, along with reports that concluded a breeder reactor without denatured fuel would not be able to be deployed worldwide, due to insufficient proliferation resistance. \cite{engel_conceptual_1980}
@@ -314,7 +355,14 @@ Fuel Composition & 7 \\
 \end{tabular}
 \end{center}
 
-As stated previously, the reprocessing in this design is purposefully limited in order to improve the fuel cycle's proliferation resistance.
+As stated previously, the reprocessing in this design is purposefully limited in order to improve the fuel cycle's proliferation resistance.  The desig includes an off-gas system, which will remove gaseous fission products.  Aside from this, however, the only other treatment the fuel recieves is what is necessary to keep oxygen-contamination to a minimum, and to maintain the proper levels of fissile isotopes within the fuel.  The DMSR does not include the liquid-metal reduction-extraction commonly seen in previous designs, and does not, at any point, separate protactinium.  The design assumes noble metals will leave the fuel by plating out on the piping.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[height=.5\textheight]{figures/dmsr-proc.png}
+  \captionof{figure}{The diversion of salt to the off-gas system}
+  \label{fig:figG}
+\end{figure}
 
 \section{Integral Molten Salt Reactor (IMSR)}
 
@@ -376,7 +424,7 @@ Fuel Composition & "Fluoride Fuel Salt" \\
 \end{center}
 
 \section{Molten Salt Fast Reactor (MSFR)}
-Of the reactors given in this review, this is one of the few fast reactors (the other being Terrapower's MCFR, given below).  Because such a reactor does not use a moderator, it circumvents some of the material contraints associated with degradation of the graphite moderator.  It also has a much higher breeding ratio.  This report uses a conceptual reference reactor with these characteristics \cite{rouch_preliminary_2014}: 
+Of the reactors given in this review, this is the only one using the fast spectrum (certainly, other fast-MSRs exist, but may not necessarily be interesting from a fuel-processing stand point).  Because such a reactor does not use a moderator, it circumvents some of the material contraints associated with degradation of the graphite moderator.  It also has a much higher breeding ratio.  This report uses a conceptual reference reactor with these characteristics \cite{rouch_preliminary_2014}: 
 
 \begin{center}
 \begin{tabular}{|c|c|}
@@ -397,7 +445,6 @@ Pressure & Not Given \\
 \end{center}
 
 \begin{itemize}
-\item A power of 3000 MWth
 \item Three loops: the fuel, intermediate, and power conversion loops
 \item Within the fuel circuit, there is a total salt volume of 18 cubic meters
 	\begin{itemize}
@@ -405,7 +452,7 @@ Pressure & Not Given \\
 	\end{itemize}
 \item Within the core, there is a fertile isotope blanket region, composed of a $LiF - ThF_4$ blend that has a concentration of $ThF_4$ of 22.5 mol\%
 \item The blanket serves as the radial reflectors, to protect the reactor vessel.  On the top and bottom, there are reflectors made of nickel-based alloys.  This particular report also assumes this alloy will absorb 99\% of incoming neutrons.
-\item The design initially used a very simple cylindrical geometry for the core, but by the time the report was written, the study moved on to more realistic, and complicated geometries.
+\item The design initially used a very simple cylindrical geometry for the core, but by the time the report was written, the study moved on to more realistic, and complicated, geometries.
 	\begin{itemize}
 	\item The first geometry is referred to as Geometry I.  The radial core walls are curved, along with the top reflector.  The bottom reflector is flat
 	\item The second Geometry, Geometry II, features symmetrically curved walls within the core.  Both this and Geometry I are given in \ref{fig10} below.
@@ -420,6 +467,15 @@ Pressure & Not Given \\
   \label{fig:fig10}
 \end{figure}
 
+
+In a separate report, \cite{doligez_coupled_2014} , a reactor with the same nominal power, and actinide mol\% is studied.   While \cite{rouch_preliminary_2014} is focused on the thermal-hydraulic facets of an MSFR, \cite{doligez_coupled_2014} provides more in-depth information about the sort of fuel salt composition used in its reference model, and includes information on the reprocessing within the reference MSFR.
+
+\begin{itemize}
+\item This report gives the fissile salt explicitly: $LiF - ThF_4 - {}^{233}UF_4$ in with mol\% concentrations of $77.5\% - 20\% - 2.5\%$
+\item The fertile blanket is 50 cm thick
+\item The initial blanket salt is identical to the above report - $LiF - ThF_4$ in mol\% concentrations of $77.5\% - 22.5\%$
+
+\end{itemize}
 \begin{center}
 \begin{tabular}{|c|c|}
 \hline
@@ -434,14 +490,19 @@ Fuel Composition & 8, 9 \\
 \end{tabular}
 \end{center}
 
-In a separate report, \cite{doligez_coupled_2014} , a reactor with the same nominal power, and actinide mol\%.   While \cite{rouch_preliminary_2014} is focused on the thermal-hydraulic facets of an MSFR, \cite{doligez_coupled_2014} provides more in-depth information about the sort of fuel salt composition used in its reference model, and includes information on the reprocessing within the reference MSFR.
+\begin{figure}[H]
+  \centering
+  \includegraphics[height=.5\textheight]{figures/msfr-proc.png}
+  \captionof{figure}{Fuel processing in the MSFR}
+  \label{fig:figH}
+\end{figure}
 
-\begin{itemize}
-\item This report gives the fissile salt explicitly: $LiF - ThF_4 - {}^{233}UF_4$ in with mol\% concentrations of $77.5\% - 20\% - 2.5\%$
-\item The fertile blanket is 50 cm thick
-\item The initial blanket salt is identical to the above report - $LiF - ThF_4$ in mol\% concentrations of $77.5\% - 22.5\%$
-
-\end{itemize}
+\begin{figure}[H]
+  \centering
+  \includegraphics[height=.5\textheight]{figures/msfr-offgas.png}
+  \captionof{figure}{The off-gas system of the MSFR}
+  \label{fig:figI}
+\end{figure}
 
 \section{Transatomic}
 
