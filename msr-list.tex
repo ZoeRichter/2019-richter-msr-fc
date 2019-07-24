@@ -12,6 +12,8 @@
 \usepackage{caption}
 \usepackage{xcolor}
 \usepackage{makecell}
+\usepackage{svg}
+\usepackage{import}
 \def\thesection       {\arabic{section}}
 \def\thesubsection     {\thesection.\alph{subsection}}
 
@@ -53,9 +55,9 @@ This reactor is given as the first MSR design.  Technically, the Aircraft Reacto
 \hline
 MWth & 10\\
 \hline
-MWe & Not Given \\
+MWe & not given \\
 \hline
-Spectrum & Thermal \\
+Spectrum & thermal \\
 \hline
 Core Inlet Temperature & 635 C \\
 \hline
@@ -65,6 +67,13 @@ Pressure & 0.14 MPa \\
 \hline
 \end{tabular}
 \end{center}
+
+test test test:
+\begin{figure}
+    \centering
+    \def\svgwidth{\columnwidth}
+    \import{figures/}{msre-proc.pdf_tex}
+\end{figure}
 
 \begin{itemize}
 \item Single-region
@@ -95,7 +104,7 @@ Fuel-Moderator Ratio & 22.4-77.6 \\
 \hline
 Coolant & $LiFBeF_2$ \\
 \hline
-Moderator & Graphite \\
+Moderator & graphite \\
 \hline
 Fuel Composition & 2, 3, 4 \\
 \hline
@@ -133,7 +142,7 @@ MWth & 2250 \\
 \hline
 MWe & 1000 \\
 \hline
-Spectrum & Thermal \\
+Spectrum & thermal \\
 \hline
 Core Inlet Temperature & 566 C \\
 \hline
@@ -160,9 +169,9 @@ Pressure & 0.52 MPa \\
 \begin{center}
 \begin{tabular}{|c|c|}
 \hline
-Fuel-Moderator Ratio & 13-87 \\
+Fuel-Moderator Ratio & 13-87 \%vol \\
 \hline
-Moderator & Graphite \\
+Moderator & graphite \\
 \hline
 Fuel Composition & 5 \\
 \hline
@@ -199,7 +208,7 @@ The chemical processing is more involved than the MSRE, and includes:
 \begin{figure}[H]
   \centering
   \includegraphics[height=.5\textheight]{figures/msbr-proc.png}
-  \captionof{figure}{Material Flow in the MSBR Fuel-Processing Cell}
+  \captionof{figure}{Material flow in the MSBR fuel-processing cell}
   \label{fig:figC}
 \end{figure}
 
@@ -220,7 +229,7 @@ MWth & 750 \\
 \hline
 MWe & 350 \\
 \hline
-Spectrum & Thermal \\
+Spectrum & thermal \\
 \hline
 Core Inlet Temperature & 566 C\\
 \hline
@@ -414,11 +423,11 @@ Pressure & 0.4 MPa \\
 \hline
 Fuel-Moderator Ratio & Not Given \\
 \hline
-Coolant & "Fluoride Salt" \\
+Coolant & "fluoride salt" \\
 \hline
-Moderator & Graphite \\
+Moderator & graphite \\
 \hline
-Fuel Composition & "Fluoride Fuel Salt" \\
+Fuel Composition & "fluoride fuel salt" \\
 \hline
 \end{tabular}
 \end{center}
@@ -521,7 +530,7 @@ Core Inlet Temperature & Not Given \\
 \hline
 Core Outlet Temperature & 650 C\\
 \hline
-Pressure & "Near-Atmospheric" \\
+Pressure & "near-atmospheric" \\
 \hline
 \end{tabular}
 \end{center}
@@ -547,11 +556,11 @@ Pressure & "Near-Atmospheric" \\
 \begin{center}
 \begin{tabular}{|c|c|}
 \hline
-Fuel-Moderator Ratio & Not Given \\
+Fuel-Moderator Ratio & not given \\
 \hline
 Coolant & $FLiNaK$ \\
 \hline
-Moderator & Zirconium Hydride \\
+Moderator & zirconium hydride \\
 \hline
 Fuel Composition & 10 \\
 \hline
